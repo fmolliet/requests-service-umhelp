@@ -1,7 +1,7 @@
 {
-  "name": "requests",
+  "name": "orders",
   "version": "1.0.0",
-  "description": "Microservice 2 Clean Up request",
+  "description": "Microservice 2 Clean Up orders",
   "main": "index.js",
   "author": "FMolliet <fabiomolliet@hotmail.com>",
   "license": "MIT",
