@@ -10,6 +10,10 @@ const OrdersSchema = new Schema({
         type: Number,
          required: true
     },
+    disable: {
+        type: Boolean,
+        default: false,
+      }
 })
 
 module.exports = model("Orders", OrdersSchema);

@@ -13,8 +13,12 @@ class OrderService {
         return Order.create(order)
     }
 
-    putOrder(order, updateData){
-        return Order.update(order,updateData);
+    patchOrder(order, updateData){
+        return Order.updateOne(order,updateData);
+    }
+
+    putOrder(order){
+        return Order.updateOne(order, { disable: true});
     }
 
     deleteOrder(order){

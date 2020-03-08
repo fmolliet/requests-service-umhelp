@@ -1,4 +1,4 @@
-const { indexOrder, showOrder, postOrder, putOrder, deleteOrder } = require("../service/OrderServices");
+const { indexOrder, showOrder, postOrder, patchOrder, putOrder,deleteOrder } = require("../service/OrderServices");
 
 class OrdersController {
     async index(req, res){
@@ -30,12 +30,21 @@ class OrdersController {
 
     async update(req, res){
         try {
-          const order = await putOrder(req.query,req.body);
+          const order = await patchOrder(req.query,req.body);
           return res.status(200).json(order);
         } catch (err) {
           return res.status(400).json(err);
         }
     }
+
+    async disable(req, res){
+        try {
+          const order = await putOrder(req.query);
+          return res.status(200).json(order);
+        } catch (err) {
+          return res.status(400).json(err);
+        }
+      }
 
     async destroy(req, res){
         try {
