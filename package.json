@@ -6,8 +6,8 @@
   "author": "FMolliet <fabiomolliet@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
   },
   "dependencies": {
     "axios": "^0.19.2",
