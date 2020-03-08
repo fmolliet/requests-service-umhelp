@@ -1,10 +1,10 @@
 const axios = require('axios');
 
-const Request = require('../models/Request');
+const Order = require('../models/Order');
 
 module.exports = {
     async index(request, response){
-        const orders = await orders.find();
+        const orders = await Order.find();
 
         return response.json(orders);
     },
@@ -14,16 +14,35 @@ module.exports = {
 
         //let request = await Request.findOne({ id_requester });
         // Necessario verificar se foi aplicado disconto (Se foi consulta o outro servico)
+        /*
         if( discount ){
             const apiResponse = await axios.get(`${process.env.DISC_HOST}:${process.env.DISC_PORT}/discounts/${discount}`)
             // retorno
             const {  } = apiResponse.data;
 
         }
+        */
+
+       order = await Order.create({
+            id_requester,
+            date,
+            duration
+        });
+
+        return response.json(order);
 
     },
 
     async update() {
 
+    },
+
+    async show() {
+
+    },
+
+    async destroy() {
+
     }
+
 }

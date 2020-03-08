@@ -9,9 +9,6 @@ const app = express()
 
 mongoose.connect(process.env.STR_DATABASE, { useNewUrlParser: true, useUnifiedTopology: true })
 
-
-
-
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
